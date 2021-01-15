@@ -1,6 +1,6 @@
 {
   "name": "svg-sprite-loader",
-  "version": "5.2.1",
+  "version": "5.2.2",
   "description": "Webpack loader for creating SVG sprites",
   "keywords": [
     "svg",
@@ -95,8 +95,8 @@
     "lint": "eslint --quiet lib runtime scripts test",
     "precommit": "yarn lint",
     "pretest": "yarn build:runtime",
-    "prerelease": "yarn build:runtime && yarn lint && yarn test:all",
-    "release": "yarn build:examples && git add examples && standard-version -a && git push --follow-tags origin master",
+    "prerelease": "yarn build:runtime",
+    "release": "standard-version -a && git push --follow-tags origin master",
     "release:dry-run": "standard-version --no-verify",
     "test": "mocha test/*.test.js",
     "test:all": "yarn test:webpack-2 && yarn test:webpack-3 && yarn test:webpack-4",
